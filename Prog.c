@@ -19,8 +19,6 @@ int isFull() {
 int isEmpty() {
     return count == 0;
 } 
-
-(enqueue)
 void enqueue(char c) {
     if (isFull()) {
         printf("Overflow! Buffer is full.\n");
@@ -29,7 +27,7 @@ void enqueue(char c) {
     buffer[tail] = c;
     tail = (tail + 1) % SIZE;
     count++;
-} (dequeue)
+}
 char dequeue() {
     if (isEmpty()) {
         printf("Underflow! Buffer is empty.\n");
